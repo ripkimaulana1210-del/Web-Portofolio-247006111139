@@ -2,9 +2,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const roles = [
         "Fullstack Developer",
-        "Frontend Developer",
-        "Web Designer",
-        "UI Enthusiast"
+        "Web Developer",
+        "UI/UX Designer",
+        "Network Engineer",
+        "Video Editor ",
+        "Photo Editor",
     ];
 
     let roleIndex = 0;

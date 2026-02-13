@@ -9,8 +9,11 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap -->
+    <!-- cloudflare -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -21,7 +24,7 @@
     <!-- ================= NAVBAR ================= -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
         <div class="container">
-            <a class="navbar-brand fw-bold neon-text" href="#">Ripki.</a>
+            <a class="navbar-brand fw-bold neon-text" href="#">PORTOFOLIO</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -29,6 +32,7 @@
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
@@ -39,7 +43,7 @@
     </nav>
 
     <!-- ================= HOME ================= -->
-    <section class="hero-section section-home">
+    <section id="home" class="hero-section section-home">
         <div class="container">
             <div class="row align-items-center">
 
@@ -60,7 +64,10 @@
                     </h4>
 
                     <p class="hero-desc">
-                        Saya membangun pengalaman digital modern dengan desain bersih dan performa optimal.
+                        Saat ini saya fokus belajar dan mengembangkan kemampuan
+                        di bidang web development.
+                        Saya senang membangun tampilan website yang rapi,
+                        responsif, dan nyaman digunakan.
                     </p>
 
                     <div class="mt-4">
@@ -83,80 +90,97 @@
             <!-- STATS -->
             <div class="row text-center stats-section mt-5">
                 <div class="col-md-3">
+                    <h3 class="neon-text">Semester 4</h3>
+                    <p>Informatics Student</p>
+                </div>
+
+                <div class="col-md-3">
                     <h3 class="neon-text">10+</h3>
-                    <p>Projects</p>
+                    <p>Mini Projects</p>
                 </div>
+
                 <div class="col-md-3">
-                    <h3 class="neon-text">2+</h3>
-                    <p>Years Learning</p>
+                    <h3 class="neon-text">UI • Web</h3>
+                    <p>Focused Field</p>
                 </div>
+
                 <div class="col-md-3">
-                    <h3 class="neon-text">15+</h3>
-                    <p>Technologies</p>
+                    <h3 class="neon-text">Continuous</h3>
+                    <p>Self Learning</p>
                 </div>
-                <div class="col-md-3">
-                    <h3 class="neon-text">100%</h3>
-                    <p>Dedication</p>
-                </div>
+
             </div>
         </div>
     </section>
 
     <!-- ================= ABOUT ================= -->
-    <section id="about" class="section-about">
+    <section id="about" class="section-about py-5">
         <div class="container">
             <div class="row align-items-center">
 
                 <!-- TEXT -->
                 <div class="col-lg-6 mb-5 mb-lg-0">
-                    <h2 class="section-title">About Me</h2>
+                    <h2 class="section-title mb-4">About Me</h2>
 
-                    <p class="about-text mt-4">
-                        Saya adalah mahasiswa yang berfokus pada pengembangan web modern
-                        dan membangun website responsif menggunakan HTML, CSS,
-                        JavaScript, dan Bootstrap.
+                    <p class="about-text">
+                        Saya adalah mahasiswa semester 4 jurusan Informatika
+                        di Universitas Siliwangi (UNSIL) yang memiliki minat pada
+                        pengembangan web dan teknologi digital.
                     </p>
 
                     <p class="about-text">
-                        Saya mengutamakan clean code, desain yang rapi,
-                        serta pengalaman pengguna yang optimal.
+                        Saat ini saya sedang aktif mempelajari HTML, CSS, JavaScript,
+                        serta framework seperti Bootstrap untuk membangun website
+                        yang responsif dan modern.
                     </p>
 
-                    <div class="about-features">
-                        <div class="feature-item">✔ Clean Code</div>
-                        <div class="feature-item">✔ Responsive Design</div>
-                        <div class="feature-item">✔ UI Modern</div>
+                    <p class="about-text">
+                        Selain pengembangan web, saya juga tertarik pada desain visual,
+                        editing media, serta dasar-dasar jaringan komputer.
+                        Saya terus mengembangkan kemampuan melalui project pribadi
+                        dan pembelajaran mandiri.
+                    </p>
+
+                    <div class="about-features mt-4">
+                        <div class="feature-item">✔ Semester 4</div>
+                        <div class="feature-item">✔ Informatika</div>
+                        <div class="feature-item">✔ Universitas Siliwangi</div>
                     </div>
                 </div>
 
                 <!-- VISUAL -->
                 <div class="col-lg-6">
-                    <div class="about-visual">
-                        <div class="visual-card">
-                            <h4>Web Development</h4>
-                            <p>Membangun website modern & interaktif.</p>
+                    <div class="about-visual-wrapper">
+
+                        <div class="unsil-wrapper mx-auto">
+                            <img src="asset/UNSIL.jpg" alt="Universitas Siliwangi" class="unsil-img back">
+
+                            <img src="asset/LOGO-UNSIL.png" alt="Logo UNSIL" class="unsil-img front">
                         </div>
 
-                        <div class="visual-card">
-                            <h4>UI Design</h4>
-                            <p>Desain bersih & user friendly.</p>
-                        </div>
+                        <p class="unsil-caption mt-3">
+                            Universitas Siliwangi – Tasikmalaya
+                        </p>
                     </div>
                 </div>
 
             </div>
+
+        </div>
         </div>
     </section>
+
 
     <!-- ================= CREATIVE SKILLS ================= -->
     <section id="skills" class="section-skills">
         <div class="container text-center">
             <h2 class="section-title-light mb-5">Creative Skills</h2>
 
-            <div class="row">
+            <div class="row g-4 justify-content-center">
+
 
                 <!-- Video Editing -->
-                <div class="col-md-6 col-lg-3 mb-4">
+                <div class="col-sm-6 col-lg-4 col-xl-3">
                     <div class="skill-card-modern">
                         <img src="asset/video editing.png" class="skill-img mb-3" alt="Video Editing">
                         <h5>Video Editing</h5>
@@ -165,7 +189,7 @@
                 </div>
 
                 <!-- Photo Editing -->
-                <div class="col-md-6 col-lg-3 mb-4">
+                <div class="col-sm-6 col-lg-4 col-xl-3">
                     <div class="skill-card-modern">
                         <img src="asset/editing foto.png" class="skill-img mb-3" alt="Photo Editing">
                         <h5>Photo Editing</h5>
@@ -174,7 +198,7 @@
                 </div>
 
                 <!-- Graphic Design -->
-                <div class="col-md-6 col-lg-3 mb-4">
+                <div class="col-sm-6 col-lg-4 col-xl-3">
                     <div class="skill-card-modern">
                         <img src="asset/design Graph.png" class="skill-img mb-3" alt="Graphic Design">
                         <h5>Graphic Design</h5>
@@ -183,7 +207,7 @@
                 </div>
 
                 <!-- Web Developer -->
-                <div class="col-md-6 col-lg-3 mb-4">
+                <div class="col-sm-6 col-lg-4 col-xl-3">
                     <div class="skill-card-modern">
                         <img src="asset/Web Dev.png" class="skill-img mb-3" alt="Web Developer">
                         <h5>Web Development</h5>
@@ -192,7 +216,7 @@
                 </div>
 
                 <!-- Network Engineering -->
-                <div class="col-md-6 col-lg-3 mb-4">
+                <div class="col-sm-6 col-lg-4 col-xl-3">
                     <div class="skill-card-modern">
                         <img src="asset/network Enginering.png" class="skill-img mb-3" alt="Network Engineering">
                         <h5>Network Engineering</h5>
@@ -203,7 +227,7 @@
                 </div>
 
                 <!-- Microsoft Office -->
-                <div class="col-md-6 col-lg-3 mb-4">
+                <div class="col-sm-6 col-lg-4 col-xl-3">
                     <div class="skill-card-modern">
                         <img src="asset/office.png" class="skill-img mb-3" alt="Microsoft Office">
                         <h5>Microsoft Office</h5>
@@ -328,10 +352,27 @@
                     </p>
 
                     <div class="contact-info mt-4">
-                        <p><strong>Email:</strong> ripki@email.com</p>
+                        <p><strong>Email:</strong> ripkimaulana1210@email.com</p>
                         <p><strong>Location:</strong> Indonesia</p>
                         <p><strong>Available:</strong> Freelance / Internship</p>
                     </div>
+
+                    <!-- Social Media -->
+                    <div class="contact-social mt-4">
+                        <a href="https://wa.me/6282371873963" target="_blank" class="social-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+
+                        <a href="https://instagram.com/rifkimaulana774" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/ripki-maulana-3925a3315?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                            target="_blank" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+
                 </div>
 
                 <div class="col-lg-6">
@@ -355,26 +396,27 @@
 
     <!-- ================= FOOTER ================= -->
     <footer class="footer text-center">
-        <p>© 2025 Ripki Maulana. All rights reserved.</p>
+        <p>© 2026 Ripki Maulana. All rights reserved.</p>
     </footer>
 
     <!-- CV MODAL -->
-    <div class="modal fade" id="cvModal" tabindex="-1">
+    <div class="modal fade" id="cvModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content">
 
                 <div class="modal-header">
-                    <h5 class="modal-title">My CV</h5>
+                    <h5 class="modal-title">Curriculum Vitae</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
 
                 <div class="modal-body p-0" style="height:80vh;">
-                    <iframe src="asset/CV.png" width="100%" height="100%" style="border:none;">
+                    <iframe src="asset/CV.pdf#toolbar=0" width="100%" height="100%" style="border:none;">
                     </iframe>
                 </div>
 
                 <div class="modal-footer">
-                    <a href="asset/CV.png" class="btn btn-neon" download>
+                    <a href="asset/CV.pdf" class="btn btn-neon" download="CV-Ripki-Maulana.pdf" target="_blank"
+                        rel="noopener">
                         Download CV
                     </a>
                 </div>
