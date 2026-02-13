@@ -344,6 +344,12 @@ section {
     color: white;
 }
 
+.project-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
 /* ===================================================== */
 /* 11. CONTACT */
 /* ===================================================== */
