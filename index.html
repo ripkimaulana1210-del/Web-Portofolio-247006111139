@@ -1,434 +1,471 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Ripki Maulana</title>
+    <title>Ripki Maulana — Web Developer &amp; Data/AI Enthusiast</title>
+    <meta name="description" content="Portfolio Ripki Maulana — Mahasiswa Informatika Universitas Siliwangi. Web developer, data &amp; AI enthusiast. Membangun sistem cerdas dengan kode, data, dan AI.">
+    <meta name="author" content="Ripki Maulana">
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Ripki Maulana — Web Developer & Data/AI Enthusiast">
+    <meta property="og:description" content="Portfolio Ripki Maulana — Mahasiswa Informatika Universitas Siliwangi. Web developer, data & AI enthusiast.">
+    <meta property="og:image" content="asset/profile_nobg.png">
+    <meta property="og:type" content="website">
 
-    <!-- cloudflare -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Ripki Maulana — Web Developer & Data/AI Enthusiast">
+    <meta name="twitter:description" content="Portfolio Ripki Maulana — Mahasiswa Informatika Universitas Siliwangi.">
+    <meta name="twitter:image" content="asset/profile_nobg.png">
 
-    <!-- Bootstrap -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts: Space Grotesk + Inter + JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-    <!-- ================= NAVBAR ================= -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
-        <div class="container">
-            <a class="navbar-brand fw-bold neon-text" href="#">PORTOFOLIO</a>
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav class="nav" id="nav" role="navigation" aria-label="Navigasi utama">
+        <div class="nav__inner container">
+            <a class="nav__brand" href="#beranda" aria-label="Kembali ke beranda">RM</a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+            <ul class="nav__links" id="navLinks">
+                <li><a href="#beranda" class="nav__link is-active">Beranda</a></li>
+                <li><a href="#tentang" class="nav__link">Tentang</a></li>
+                <li><a href="#keahlian" class="nav__link">Keahlian</a></li>
+                <li><a href="#proyek" class="nav__link">Proyek</a></li>
+                <li><a href="#perjalanan" class="nav__link">Perjalanan</a></li>
+                <li><a href="#kontak" class="nav__link">Kontak</a></li>
+            </ul>
+
+            <button class="nav__toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false" aria-controls="navMobile">
+                <svg class="nav__icon-hamburger" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+                <svg class="nav__icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
             </button>
+        </div>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
+        <!-- Mobile menu -->
+        <div class="nav__mobile" id="navMobile" aria-hidden="true">
+            <ul class="nav__mobile-links">
+                <li><a href="#beranda" class="nav__mobile-link">Beranda</a></li>
+                <li><a href="#tentang" class="nav__mobile-link">Tentang</a></li>
+                <li><a href="#keahlian" class="nav__mobile-link">Keahlian</a></li>
+                <li><a href="#proyek" class="nav__mobile-link">Proyek</a></li>
+                <li><a href="#perjalanan" class="nav__mobile-link">Perjalanan</a></li>
+                <li><a href="#kontak" class="nav__mobile-link">Kontak</a></li>
+            </ul>
         </div>
     </nav>
 
-    <!-- ================= HOME ================= -->
-    <section id="home" class="hero-section section-home">
-        <div class="container">
-            <div class="row align-items-center">
+    <main>
+        <!-- ==================== HERO ==================== -->
+        <section id="beranda" class="hero">
+            <div class="container hero__inner">
 
-                <!-- PROFILE -->
-                <div class="col-lg-6 text-center mb-5 mb-lg-0">
-                    <div class="profile-wrapper">
-                        <img src="asset/profile_nobg.png" class="profile-img" alt="Ripki Maulana">
+                <div class="hero__content">
+                    <div class="hero__availability reveal" data-reveal-delay="0">
+                        <span class="hero__dot" aria-hidden="true"></span>
+                        Tersedia untuk magang &amp; kolaborasi
+                    </div>
+
+                    <h1 class="hero__name reveal" data-reveal-delay="100">Ripki Maulana</h1>
+
+                    <p class="hero__headline reveal" data-reveal-delay="200">Membangun sistem cerdas dengan kode, data, dan AI.</p>
+
+                    <p class="hero__role reveal" data-reveal-delay="300">
+                        <span class="hero__role-text" id="typingText">Web Developer</span><span class="hero__cursor" aria-hidden="true">|</span>
+                    </p>
+
+                    <p class="hero__desc reveal" data-reveal-delay="400">Mahasiswa Informatika di Universitas Siliwangi. Saya membangun web yang rapi dan fungsional — dan sedang memperdalam backend, data, serta kecerdasan buatan.</p>
+
+                    <div class="hero__actions reveal" data-reveal-delay="500">
+                        <button class="btn btn--primary" id="cvBtn" type="button">
+                            Lihat CV
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 3h6v6M10 14L21 3M21 3v6M21 3H15"/></svg>
+                        </button>
+                        <a href="#proyek" class="btn btn--ghost">Lihat Proyek</a>
+                    </div>
+
+                    <div class="hero__social reveal" data-reveal-delay="600">
+                        <a href="https://wa.me/6282371873963" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        </a>
+                        <a href="https://instagram.com/rifkimaulana774" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ripki-maulana-3925a3315" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                        <a href="mailto:ripkimaulana1210@email.com" class="social-link" aria-label="Email">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        </a>
                     </div>
                 </div>
 
-                <!-- TEXT -->
-                <div class="col-lg-6">
-                    <p class="intro-text">Hello, I'm</p>
-                    <h1 class="fw-bold neon-text">Ripki Maulana</h1>
-
-                    <h4 class="mb-3">
-                        And I'm a <span class="highlight-text" id="typing-text"></span>
-                    </h4>
-
-                    <p class="hero-desc">
-                        Saat ini saya fokus belajar dan mengembangkan kemampuan
-                        di bidang web development.
-                        Saya senang membangun tampilan website yang rapi,
-                        responsif, dan nyaman digunakan.
-                    </p>
-
-                    <div class="mt-4">
-                        <a href="#" class="btn btn-neon me-3" data-bs-toggle="modal" data-bs-target="#cvModal">
-                            View CV
-                        </a>
-
-                        <a href="#contact" class="btn btn-outline-light me-3">
-                            Contact Me
-                        </a>
-
-                        <a href="#projects" class="btn btn-outline-light">
-                            My Work
-                        </a>
+                <div class="hero__visual">
+                    <div class="hero__portrait reveal" data-reveal-delay="200">
+                        <img src="asset/profile_nobg.png" alt="Potret Ripki Maulana" width="400" height="480" loading="eager">
                     </div>
-
                 </div>
             </div>
 
-            <!-- STATS -->
-            <div class="row text-center stats-section mt-5">
-                <div class="col-md-3">
-                    <h3 class="neon-text">Semester 4</h3>
-                    <p>Informatics Student</p>
+            <div class="hero__stats container reveal" data-reveal-delay="700">
+                <div class="hero__stat">
+                    <span class="hero__stat-label">Semester 4</span>
+                    <span class="hero__stat-sep" aria-hidden="true">·</span>
+                    <span class="hero__stat-label">Informatika</span>
                 </div>
-
-                <div class="col-md-3">
-                    <h3 class="neon-text">10+</h3>
-                    <p>Mini Projects</p>
+                <div class="hero__stat-divider" aria-hidden="true"></div>
+                <div class="hero__stat">
+                    <span class="hero__stat-label">10+ Proyek Mini</span>
                 </div>
-
-                <div class="col-md-3">
-                    <h3 class="neon-text">UI • Web</h3>
-                    <p>Focused Field</p>
+                <div class="hero__stat-divider" aria-hidden="true"></div>
+                <div class="hero__stat">
+                    <span class="hero__stat-label">Web</span>
+                    <span class="hero__stat-sep" aria-hidden="true">·</span>
+                    <span class="hero__stat-label">Data</span>
+                    <span class="hero__stat-sep" aria-hidden="true">·</span>
+                    <span class="hero__stat-label">AI</span>
                 </div>
-
-                <div class="col-md-3">
-                    <h3 class="neon-text">Continuous</h3>
-                    <p>Self Learning</p>
-                </div>
-
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ================= ABOUT ================= -->
-    <section id="about" class="section-about py-5">
-        <div class="container">
-            <div class="row align-items-center">
+        <!-- ==================== ABOUT ==================== -->
+        <section id="tentang" class="about">
+            <div class="container">
+                <div class="about__statement reveal">
+                    <p class="statement-text">Saya membangun di persimpangan software, data, dan kecerdasan buatan.</p>
+                </div>
 
-                <!-- TEXT -->
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                    <h2 class="section-title mb-4">About Me</h2>
+                <div class="about__header reveal">
+                    <h2 class="section-title">Tentang Saya</h2>
+                    <div class="section-line" aria-hidden="true"></div>
+                </div>
 
-                    <p class="about-text">
-                        Saya adalah mahasiswa semester 4 jurusan Informatika
-                        di Universitas Siliwangi (UNSIL) yang memiliki minat pada
-                        pengembangan web dan teknologi digital.
-                    </p>
+                <div class="about__body">
+                    <div class="about__text">
+                        <p class="reveal">Saya mahasiswa Informatika di Universitas Siliwangi yang fokus pada pengembangan web — dan sedang memperluas arah ke backend, data, dan AI.</p>
+                        <p class="reveal">Saat ini saya membangun dengan HTML, CSS, dan JavaScript, sambil mendalami logika backend dan arsitektur API. Saya tertarik pada bagaimana data diolah menjadi keputusan, dan bagaimana model AI diterapkan pada masalah nyata.</p>
+                    </div>
 
-                    <p class="about-text">
-                        Saat ini saya sedang aktif mempelajari HTML, CSS, JavaScript,
-                        serta framework seperti Bootstrap untuk membangun website
-                        yang responsif dan modern.
-                    </p>
-
-                    <p class="about-text">
-                        Selain pengembangan web, saya juga tertarik pada desain visual,
-                        editing media, serta dasar-dasar jaringan komputer.
-                        Saya terus mengembangkan kemampuan melalui project pribadi
-                        dan pembelajaran mandiri.
-                    </p>
-
-                    <div class="about-features mt-4">
-                        <div class="feature-item">✔ Semester 4</div>
-                        <div class="feature-item">✔ Informatika</div>
-                        <div class="feature-item">✔ Universitas Siliwangi</div>
+                    <div class="about__focus">
+                        <p class="reveal">Saya menikmati masalah yang menuntut pemikiran sistematis: merancang struktur data, menyederhanakan logika yang rumit, dan membangun antarmuka yang jelas.</p>
+                        <p class="reveal">Di luar koding, saya mengerjakan editing video, desain grafis, dan jaringan komputer — kebiasaan yang melatih ketelitian dan pemahaman sistem secara menyeluruh.</p>
                     </div>
                 </div>
 
-                <!-- VISUAL -->
-                <div class="col-lg-6">
-                    <div class="about-visual-wrapper">
+                <div class="about__chips reveal">
+                    <span class="chip">Semester 4</span>
+                    <span class="chip">Informatika</span>
+                    <span class="chip">Universitas Siliwangi</span>
+                    <span class="chip">10+ Proyek Mini</span>
+                </div>
+            </div>
+        </section>
 
-                        <div class="unsil-wrapper mx-auto">
-                            <img src="asset/UNSIL.jpg" alt="Universitas Siliwangi" class="unsil-img back">
+        <!-- ==================== SKILLS ==================== -->
+        <section id="keahlian" class="skills">
+            <div class="container">
+                <div class="skills__header reveal">
+                    <h2 class="section-title">Keahlian</h2>
+                    <div class="section-line" aria-hidden="true"></div>
+                </div>
 
-                            <img src="asset/LOGO-UNSIL.png" alt="Logo UNSIL" class="unsil-img front">
+                <div class="skills__grid">
+                    <div class="skill-category reveal">
+                        <div class="skill-category__header">
+                            <span class="skill-category__number" aria-hidden="true">01</span>
+                            <h3 class="skill-category__title">Web Development</h3>
                         </div>
+                        <ul class="skill-category__list">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>Bootstrap</li>
+                            <li>Responsive Design</li>
+                        </ul>
+                    </div>
 
-                        <p class="unsil-caption mt-3">
-                            Universitas Siliwangi – Tasikmalaya
-                        </p>
+                    <div class="skill-category reveal">
+                        <div class="skill-category__header">
+                            <span class="skill-category__number" aria-hidden="true">02</span>
+                            <h3 class="skill-category__title">Data &amp; AI</h3>
+                            <span class="skill-category__badge">Sedang dieksplorasi</span>
+                        </div>
+                        <ul class="skill-category__list">
+                            <li>Data Analytics</li>
+                            <li>Machine Learning</li>
+                            <li>Computer Vision</li>
+                            <li>Backend Architecture</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category reveal">
+                        <div class="skill-category__header">
+                            <span class="skill-category__number" aria-hidden="true">03</span>
+                            <h3 class="skill-category__title">Kreatif &amp; Desain</h3>
+                        </div>
+                        <ul class="skill-category__list">
+                            <li>Video Editing <span class="skill-detail">Premiere Pro, CapCut, After Effects</span></li>
+                            <li>Photo Editing <span class="skill-detail">Photoshop, Lightroom</span></li>
+                            <li>Graphic Design <span class="skill-detail">Figma, Canva</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category reveal">
+                        <div class="skill-category__header">
+                            <span class="skill-category__number" aria-hidden="true">04</span>
+                            <h3 class="skill-category__title">Infrastruktur &amp; Tools</h3>
+                        </div>
+                        <ul class="skill-category__list">
+                            <li>Git</li>
+                            <li>GitHub</li>
+                            <li>Cisco</li>
+                            <li>MikroTik</li>
+                            <li>Microsoft Office</li>
+                        </ul>
                     </div>
                 </div>
-
             </div>
+        </section>
 
-        </div>
-        </div>
-    </section>
-
-
-    <!-- ================= CREATIVE SKILLS ================= -->
-    <section id="skills" class="section-skills">
-        <div class="container text-center">
-            <h2 class="section-title-light mb-5">Creative Skills</h2>
-
-            <div class="row g-4 justify-content-center">
-
-
-                <!-- Video Editing -->
-                <div class="col-sm-6 col-lg-4 col-xl-3">
-                    <div class="skill-card-modern">
-                        <img src="asset/video editing.png" class="skill-img mb-3" alt="Video Editing">
-                        <h5>Video Editing</h5>
-                        <p class="skill-tools">Premiere Pro • CapCut • After Effects</p>
-                    </div>
+        <!-- ==================== PROJECTS ==================== -->
+        <section id="proyek" class="projects">
+            <div class="container">
+                <div class="projects__header reveal">
+                    <h2 class="section-title">Proyek</h2>
+                    <div class="section-line" aria-hidden="true"></div>
                 </div>
 
-                <!-- Photo Editing -->
-                <div class="col-sm-6 col-lg-4 col-xl-3">
-                    <div class="skill-card-modern">
-                        <img src="asset/editing foto.png" class="skill-img mb-3" alt="Photo Editing">
-                        <h5>Photo Editing</h5>
-                        <p class="skill-tools">Photoshop • Lightroom</p>
+                <!-- Featured Project -->
+                <a href="https://quadcalc.vercel.app/" target="_blank" rel="noopener" class="project-featured reveal">
+                    <div class="project-featured__image">
+                        <img src="asset/quadcalc.png" alt="Screenshot QuadCalc — Kalkulator fungsi kuadrat interaktif" width="720" height="450" loading="lazy">
                     </div>
-                </div>
-
-                <!-- Graphic Design -->
-                <div class="col-sm-6 col-lg-4 col-xl-3">
-                    <div class="skill-card-modern">
-                        <img src="asset/design Graph.png" class="skill-img mb-3" alt="Graphic Design">
-                        <h5>Graphic Design</h5>
-                        <p class="skill-tools">Figma • Canva</p>
+                    <div class="project-featured__content">
+                        <span class="project-featured__label">Proyek Unggulan</span>
+                        <h3 class="project-featured__title">QuadCalc</h3>
+                        <p class="project-featured__desc">Kalkulator dan materi pembelajaran fungsi kuadrat yang interaktif.</p>
+                        <div class="project-featured__meta">
+                            <span>Pengembangan penuh</span>
+                        </div>
+                        <div class="project__tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">mathjs</span>
+                            <span class="tag">Matematika</span>
+                            <span class="tag">Interaktif</span>
+                        </div>
+                        <span class="project-featured__link">
+                            Kunjungi
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                        </span>
                     </div>
-                </div>
+                </a>
 
-                <!-- Web Developer -->
-                <div class="col-sm-6 col-lg-4 col-xl-3">
-                    <div class="skill-card-modern">
-                        <img src="asset/Web Dev.png" class="skill-img mb-3" alt="Web Developer">
-                        <h5>Web Development</h5>
-                        <p class="skill-tools">HTML • CSS • JavaScript </p>
-                    </div>
-                </div>
-
-                <!-- Network Engineering -->
-                <div class="col-sm-6 col-lg-4 col-xl-3">
-                    <div class="skill-card-modern">
-                        <img src="asset/network Enginering.png" class="skill-img mb-3" alt="Network Engineering">
-                        <h5>Network Engineering</h5>
-                        <p class="skill-tools">
-                            Cisco • MikroTik • VLAN • Routing Protocol
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Microsoft Office -->
-                <div class="col-sm-6 col-lg-4 col-xl-3">
-                    <div class="skill-card-modern">
-                        <img src="asset/Office.png" class="skill-img mb-3" alt="Microsoft Office">
-                        <h5>Microsoft Office</h5>
-                        <p class="skill-tools">
-                            Word • Excel • PowerPoint
-                        </p>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ================= PROJECTS ================= -->
-    <section id="projects" class="section-projects text-center">
-        <div class="container">
-            <h2 class="section-title-dark">My Projects</h2>
-
-            <div class="row mt-5">
-
-                <!-- Project 1 -->
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <a href="https://quadcalc.vercel.app/" target="_blank" class="project-link">
-
-                        <div class="project-card">
-                            <img src="asset/quadcalc.png" class="project-img" alt="QuadCalc App">
-
-                            <div class="project-overlay">
-                                <div>
-                                    <h5>QuadCalc</h5>
-                                    <p>Website ini juga menyediakan materi dan kalkulator untuk membantu memahami serta
-                                        menghitung fungsi kuadrat.</p>
-                                    <span class="btn btn-project mt-3">Visit</span>
-                                </div>
+                <!-- Projects Grid -->
+                <div class="projects__grid">
+                    <a href="https://scholaria-app-mu.vercel.app" target="_blank" rel="noopener" class="project-card reveal">
+                        <div class="project-card__image">
+                            <img src="asset/Scholaria.png" alt="Screenshot Scholaria — Platform edukasi dan informasi akademik" width="600" height="400" loading="lazy">
+                        </div>
+                        <div class="project-card__body">
+                            <h3 class="project-card__title">Scholaria</h3>
+                            <p class="project-card__desc">Platform edukasi dan informasi akademik.</p>
+                            <div class="project__tags">
+                                <span class="tag">Bootstrap</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Edukasi</span>
+                                <span class="tag">Platform</span>
                             </div>
+                            <span class="project-card__link">
+                                Kunjungi
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            </span>
                         </div>
+                    </a>
 
+                    <a href="https://alloc.vercel.app/" target="_blank" rel="noopener" class="project-card reveal">
+                        <div class="project-card__image">
+                            <img src="asset/alloc.png" alt="Screenshot Alloc — Simulator alokasi memori interaktif" width="600" height="400" loading="lazy">
+                        </div>
+                        <div class="project-card__body">
+                            <h3 class="project-card__title">Alloc</h3>
+                            <p class="project-card__desc">Simulator interaktif untuk memahami konsep alokasi memori.</p>
+                            <div class="project__tags">
+                                <span class="tag">Bootstrap</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Simulasi</span>
+                                <span class="tag">Sistem</span>
+                            </div>
+                            <span class="project-card__link">
+                                Kunjungi
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            </span>
+                        </div>
+                    </a>
+
+                    <a href="https://gizicare-web.vercel.app/" target="_blank" rel="noopener" class="project-card reveal">
+                        <div class="project-card__image">
+                            <img src="asset/gizicare.png" alt="Screenshot Gizicare — Platform edukasi dan pemantauan gizi anak" width="600" height="400" loading="lazy">
+                        </div>
+                        <div class="project-card__body">
+                            <h3 class="project-card__title">Gizicare</h3>
+                            <p class="project-card__desc">Platform edukasi dan pemantauan gizi anak.</p>
+                            <div class="project__tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Edukasi</span>
+                                <span class="tag">Kesehatan</span>
+                            </div>
+                            <span class="project-card__link">
+                                Kunjungi
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            </span>
+                        </div>
                     </a>
                 </div>
-
-
-                <!-- Project 2 -->
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <a href="https://scholaria-app-mu.vercel.app" target="_blank" class="project-link">
-
-                        <div class="project-card">
-                            <img src="asset/Scholaria.png" class="project-img" alt="Landing Page">
-
-                            <div class="project-overlay">
-                                <div>
-                                    <h5>Scholaria</h5>
-                                    <p>sebuah website edukasi yang berfungsi sebagai platform pembelajaran atau
-                                        informasi akademik.</p>
-                                    <span class="btn btn-project mt-3">Visit</span>
-                                </div>
-                            </div>
-                        </div>
-
-                    </a>
-                </div>
-
-
-                <!-- Project 3 -->
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <a href="https://alloc.vercel.app/" target="_blank" class="project-link">
-
-                        <div class="project-card">
-                            <img src="asset/alloc.png" class="project-img" alt="UI Dashboard">
-
-                            <div class="project-overlay">
-                                <div>
-                                    <h5>Alloc</h5>
-                                    <p>Website ini membantu belajar konsep memory allocation (alokasi memori) melalui
-                                        simulasi interaktif.</p>
-                                    <span class="btn btn-project mt-3">Visit</span>
-                                </div>
-                            </div>
-                        </div>
-
-                    </a>
-                </div>
-
-
-                <!-- Project 4 -->
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <a href="https://gizicare-web.vercel.app/" target="_blank" class="project-link">
-
-                        <div class="project-card">
-                            <img src="asset/gizicare.png" class="project-img" alt="Portfolio Website">
-
-                            <div class="project-overlay">
-                                <div>
-                                    <h5>Gizicare</h5>
-                                    <p>Website pada gambar adalah GiziCare, yaitu platform edukasi dan pemantauan gizi
-                                        anak.</p>
-                                    <span class="btn btn-project mt-3">Visit</span>
-                                </div>
-                            </div>
-                        </div>
-
-                    </a>
-                </div>
-
             </div>
-        </div>
-    </section>
+        </section>
 
+        <!-- ==================== EXPERIENCE ==================== -->
+        <section id="perjalanan" class="experience">
+            <div class="container">
+                <div class="experience__header reveal">
+                    <h2 class="section-title">Perjalanan</h2>
+                    <div class="section-line" aria-hidden="true"></div>
+                </div>
 
-    <!-- ================= CONTACT ================= -->
-    <section id="contact" class="section-contact">
-        <div class="container">
-            <div class="row align-items-center">
+                <div class="timeline">
+                    <div class="timeline__item reveal">
+                        <div class="timeline__marker" aria-hidden="true"></div>
+                        <div class="timeline__content">
+                            <span class="timeline__date">2024 — Sekarang</span>
+                            <h3 class="timeline__title">Mahasiswa Informatika</h3>
+                            <p class="timeline__org">Universitas Siliwangi</p>
+                            <p class="timeline__desc">Menempuh S1 Informatika dengan fokus pengembangan web, serta eksplorasi data dan AI.</p>
+                        </div>
+                    </div>
 
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                    <h2 class="section-title-light">Contact Me</h2>
+                    <div class="timeline__item reveal">
+                        <div class="timeline__marker" aria-hidden="true"></div>
+                        <div class="timeline__content">
+                            <span class="timeline__date">2024 — Sekarang</span>
+                            <h3 class="timeline__title">Proyek Mandiri</h3>
+                            <p class="timeline__desc">10+ proyek mini: kalkulator interaktif, platform edukasi, simulasi sistem, dan lainnya.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                    <p class="contact-desc mt-4">
-                        Jika kamu tertarik bekerja sama atau memiliki pertanyaan,
-                        jangan ragu untuk menghubungi saya.
+        <!-- ==================== CONTACT ==================== -->
+        <section id="kontak" class="contact">
+            <div class="container contact__inner">
+                <div class="contact__content reveal">
+                    <h2 class="contact__heading">Punya ide yang layak dibangun?</h2>
+                    <p class="contact__desc">Saya terbuka untuk magang, kolaborasi, dan proyek software, data, atau AI. Jika kamu punya ide atau kesempatan, kirim pesan.</p>
+
+                    <a href="mailto:ripkimaulana1210@email.com" class="btn btn--primary contact__email-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        ripkimaulana1210@email.com
+                    </a>
+
+                    <div class="contact__social">
+                        <a href="https://wa.me/6282371873963" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        </a>
+                        <a href="https://instagram.com/rifkimaulana774" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ripki-maulana-3925a3315" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                        <a href="mailto:ripkimaulana1210@email.com" class="social-link" aria-label="Email">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        </a>
+                    </div>
+
+                    <p class="contact__availability">
+                        <span class="hero__dot" aria-hidden="true"></span>
+                        Tersedia untuk magang &amp; kolaborasi
                     </p>
-
-                    <div class="contact-info mt-4">
-                        <p><strong>Email:</strong> ripkimaulana1210@email.com</p>
-                        <p><strong>Location:</strong> Indonesia</p>
-                        <p><strong>Available:</strong> Freelance / Internship</p>
-                    </div>
-
-                    <!-- Social Media -->
-                    <div class="contact-social mt-4">
-                        <a href="https://wa.me/6282371873963" target="_blank" class="social-icon">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-
-                        <a href="https://instagram.com/rifkimaulana774" target="_blank" class="social-icon">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-
-                        <a href="https://www.linkedin.com/in/ripki-maulana-3925a3315?utm_source=share_via&utm_content=profile&utm_medium=member_android"
-                            target="_blank" class="social-icon">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </div>
-
                 </div>
-
-                <div class="col-lg-6">
-                    <form class="contact-form">
-                        <div class="mb-3">
-                            <input type="text" class="form-control custom-input" placeholder="Your Name">
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control custom-input" placeholder="Your Email">
-                        </div>
-                        <div class="mb-3">
-                            <textarea class="form-control custom-input" rows="4" placeholder="Your Message"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-neon w-100">Send Message</button>
-                    </form>
-                </div>
-
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- ================= FOOTER ================= -->
-    <footer class="footer text-center">
-        <p>© 2026 Ripki Maulana. All rights reserved.</p>
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <p class="footer__name">Ripki Maulana</p>
+            <p class="footer__tagline">Membangun sistem cerdas dengan kode, data, dan AI.</p>
+
+            <nav class="footer__nav" aria-label="Navigasi footer">
+                <a href="#beranda">Beranda</a>
+                <span class="footer__nav-sep" aria-hidden="true">/</span>
+                <a href="#tentang">Tentang</a>
+                <span class="footer__nav-sep" aria-hidden="true">/</span>
+                <a href="#proyek">Proyek</a>
+                <span class="footer__nav-sep" aria-hidden="true">/</span>
+                <a href="#kontak">Kontak</a>
+            </nav>
+
+            <div class="footer__social">
+                <a href="https://wa.me/6282371873963" target="_blank" rel="noopener" class="social-link social-link--sm" aria-label="WhatsApp">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                </a>
+                <a href="https://instagram.com/rifkimaulana774" target="_blank" rel="noopener" class="social-link social-link--sm" aria-label="Instagram">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/ripki-maulana-3925a3315" target="_blank" rel="noopener" class="social-link social-link--sm" aria-label="LinkedIn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+                <a href="mailto:ripkimaulana1210@email.com" class="social-link social-link--sm" aria-label="Email">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                </a>
+            </div>
+            <p class="footer__copy">&copy; 2026 Ripki Maulana. All rights reserved.</p>
+        </div>
     </footer>
 
-    <!-- CV MODAL -->
-    <div class="modal fade" id="cvModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered">
-            <div class="modal-content">
-
-                <div class="modal-header">
-                    <h5 class="modal-title">Curriculum Vitae</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-
-                <div class="modal-body p-0" style="height:80vh;">
-                    <iframe src="asset/CV.pdf#toolbar=0" width="100%" height="100%" style="border:none;">
-                    </iframe>
-                </div>
-
-                <div class="modal-footer">
-                    <a href="asset/CV.pdf" class="btn btn-neon" download="CV-Ripki-Maulana.pdf" target="_blank"
-                        rel="noopener">
-                        Download CV
-                    </a>
-                </div>
-
+    <!-- ==================== CV MODAL ==================== -->
+    <div class="modal" id="cvModal" role="dialog" aria-modal="true" aria-labelledby="cvModalTitle" aria-hidden="true">
+        <div class="modal__overlay" id="modalOverlay"></div>
+        <div class="modal__content">
+            <div class="modal__header">
+                <h3 id="cvModalTitle" class="modal__title">Curriculum Vitae</h3>
+                <button class="modal__close" id="modalClose" aria-label="Tutup modal">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal__body">
+                <iframe id="cvFrame" data-src="asset/CV.pdf#toolbar=0" title="CV Ripki Maulana" loading="lazy"></iframe>
+            </div>
+            <div class="modal__footer">
+                <a href="asset/CV.pdf" download="CV-Ripki-Maulana.pdf" class="btn btn--primary">
+                    Download CV
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                </a>
             </div>
         </div>
     </div>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script/script.js"></script>
-
+    <script src="script/script.js" defer></script>
 </body>
-
 </html>
